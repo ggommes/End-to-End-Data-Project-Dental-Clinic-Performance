@@ -1,6 +1,6 @@
 # Project Background
 
-I was a dentist and co-owner of a dental clinic in Lajeado, Rio Grande do Sul, Brazil, which has been providing comprehensive dental care for six years. The clinic’s business model is built on a broad range of services, with orthodontics (braces) as a key revenue driver due to its recurring monthly income from patient consultations. Implant rehabilitations represent the highest-value procedures, complemented by a wide range of general dentistry services. This project was mande to analyze data and metrics from 2020 to 2025 and provide actionable insights and recommendations to the continuing partners.
+I was a dentist and co-owner of a dental clinic in Lajeado, Rio Grande do Sul, Brazil, which has been providing comprehensive dental care for six years. The clinic’s business model is built on a broad range of services, with orthodontics (braces) as a key revenue driver due to its recurring monthly income from patient consultations. Implant rehabilitations represent the highest-value procedures, complemented by a wide range of general dentistry services. This project was made to analyze data and metrics from 2020 to 2025 and provide actionable insights and recommendations to the continuing partners.
 
 Based on the extracted data and the clinic's operational context, this analysis will deliver insights and recommendations across four critical areas:
 
@@ -32,3 +32,6 @@ The company's main database structure, as seen below, consists of several interc
 # Executive Summary
 
 The clinic faces a concerning downward trend in general procedure revenue and patient volume since its 2022 peak, despite positive cumulative growth.This financial instability is compounded by significant month-over-month revenue volatility, suggesting challenges in cash flow predictability. Furthermore, an alarming number of delayed appointments highlights a critical operational inefficiency impacting patient satisfaction and potentially overall service capacity.
+
+![Revenues](https://github.com/user-attachments/assets/5f0bd38b-4752-4bd9-8ace-065f1d642a23)
+
