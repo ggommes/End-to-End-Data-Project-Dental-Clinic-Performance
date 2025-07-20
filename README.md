@@ -33,5 +33,7 @@ The company's main database structure, as seen below, consists of several interc
 
 The clinic faces a concerning downward trend in general procedure revenue and patient volume since its 2022 peak, despite positive cumulative growth.This financial instability is compounded by significant month-over-month revenue volatility, suggesting challenges in cash flow predictability. Furthermore, an alarming number of delayed appointments highlights a critical operational inefficiency impacting patient satisfaction and potentially overall service capacity.
 
-![Revenues](https://github.com/user-attachments/assets/5f0bd38b-4752-4bd9-8ace-065f1d642a23)
+![relatorio](https://github.com/user-attachments/assets/374002be-75d2-470f-bff9-52f3565c12b0)
+
+
 
