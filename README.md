@@ -25,7 +25,7 @@ The company's main database structure, as seen below, consists of several interc
 - **payments:** Contains general payment records for all services.
 - **direct_payments**: This table records direct, one-time payments that are not associated with a specific installment plan.
   
-![Untitled Diagram (3)](https://github.com/user-attachments/assets/a2cec683-0db5-4731-a664-f783f4b53c64)
+![Untitled Diagram (3)](https://github.com/user-attachments/assets/75ec0e43-c64b-4b90-bcaf-c547b82fbeb5)
 
  **The SQL queries used to inspect and clean the raw data for this analysis can be found within this repository.**
 
@@ -33,7 +33,46 @@ The company's main database structure, as seen below, consists of several interc
 
 The clinic faces a concerning downward trend in general procedure revenue and patient volume since its 2022 peak, despite positive cumulative growth.This financial instability is compounded by significant month-over-month revenue volatility, suggesting challenges in cash flow predictability. Furthermore, an alarming number of delayed appointments highlights a critical operational inefficiency impacting patient satisfaction and potentially overall service capacity.
 
-![relatorio](https://github.com/user-attachments/assets/374002be-75d2-470f-bff9-52f3565c12b0)
+![grafico1](https://github.com/user-attachments/assets/ccc2b42a-008d-45ad-aeec-1796eeed9c5d)
+
+
+# Insights Deep Dive
+### Growth Trajectory: From Resilient Launch to Post-2022 Challenges.
+- **With operations beginning in February 2020, the clinic started with promising revenue, demonstrating its potential.** However, the "Revenue by Month" graph clearly illustrates an immediate drop in revenue in the months following February 2020 (e.g., March to May), a direct reflection of the initial impact of the COVID-19 pandemic and lockdown measures.Despite this challenging start, the clinic showed remarkable resilience, achieving strong traction and continuous growth in both revenue and patient volume from mid-2020 onwards, which culminated in a notable peak performance in 2022. In that year, general procedure revenue reached R$ 141.021,00 in January.
+
+- **Contrasting with this initial success, starting in early 2023, the data reveals a clear deceleration and subsequent continuous downward trend in general procedure revenue and patient volume.** While the drastic reduction in 2024, with general procedure revenue falling to R$ 1.046,00 – representing a 99,26% reduction from the 2022 peak – was significantly impacted by the closure of the clinic in April and May for structural renovations, it's important to note that a strong decline trend in revenue was already being observed in the months prior to this temporary closure.
+
+- **The subsequent decline post-2022, exacerbated by the temporary closure for renovations, suggests that the growth strategies that worked during the traction phase may no longer be effective in sustaining volume.** This indicates an exhaustion of demand or a failure to continuously renew the patient base for general procedures, requiring a re-evaluation of market and operational approaches.
+
+### Consistent Growth of the Orthodontic Base Counteracting General Instability.
+- **In contrast to general procedures overall performance,** the number of new orthodontic treatments has shown a more stable and positive growth trajectory, consistently contributing to the clinic's recurring revenue. The number of new installations grew from 483 in 2020 to 1148 in 2022, reaching 1578 in 2024. Orthodontic patients visit the clinic monthly for follow-up appointments, generating a consistent and predictable stream of recurring monthly payments .The revenue generated specifically from orthodontic treatments follow-ups has remained resilient, representing a growing share of the total monthly revenue.
+
+- **This segment appears less susceptible to the fluctuations affecting general procedures**,due to the long-term commitment and installment payment structure inherent to orthodontic treatment.
+
+- **Orthodontics acts as a pillar of financial stability and cash flow predictability**, validating its strategic importance to the business model due to its recurring nature.
+
+- ![ortho revenue](https://github.com/user-attachments/assets/43919f26-c0c2-4aa3-9ac8-8cf5f94ea606)
+
+
+### Monthly Revenue Variation Reveals Seasonality and Predictability Challenges
+- **Month-over-month analysis reveals high volatility in total revenue**, with significant variations during the years. For example, total revenue in November 2022 was R$ 112.256, but dropped to R$ 65.438 in December — a decrease of 41.7%. 
+
+- **Seasonality patterns can be observed,** with months like [August and November] consistently showing higher revenues, while months like [April and February] shows declines.
+
+- **These fluctuations make cash flow less predictable**, which can challenge financial planning and limit our ability to invest confidently
+
+![revenue seasonality](https://github.com/user-attachments/assets/68222f58-2862-4b75-9ad0-8a794f15619e)
+
+### General Procedures: Declining New Patient Volume
+- **The volume of new initial consultations or evaluations for general procedures (excluding orthodontic installations) has consistently decreased**. In May 2021, 156 new general consultations were registered, dropping to 16 in [June 2025], a 89.7%. reduction.
+
+- **This decline is a strong indicator** that current patient acquisition strategies for non-orthodontic procedures are losing effectiveness or that there is a bottleneck in conversion.
+
+- **Additionally, an alarming number of delayed appointments, as highlighted in the Executive Summary, is a critical operational inefficiency impacting patient satisfaction** This issue may be contributing to the decline in new patient volume, as community perceptions spread.
+
+![22222](https://github.com/user-attachments/assets/7cb48815-b24f-4c1b-9d31-f70a3fad9919)
+
+
 
 
 
