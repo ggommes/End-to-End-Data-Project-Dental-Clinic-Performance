@@ -26,7 +26,7 @@
 
 -- Table: agenda (General Appointments)
 -- New Table: appointments
--- Comment: Removes audit columns, observations, duplicate contact data, and fields
+-- Removes audit columns, observations, duplicate contact data, and fields
 -- related to appointment confirmation or deletion that are not relevant for analyzing appointment trends.
 
 SELECT* 
@@ -55,7 +55,7 @@ DROP TABLE agconf;
 
 -- Table: atd222 (Scheduled Procedures per Attendance)
 -- New Table: procedures_appointments
--- Comment: Removal of internal control columns, terminal and user
+-- Removal of internal control columns, terminal and user
 -- information that do not contribute to the analysis of scheduled procedures.
 
 SELECT* 
@@ -85,7 +85,7 @@ ALTER TABLE procedures_appointments DROP COLUMN DT_AXON;
 -- Removal of return columns, launch numbers, and shipping details that are not directly related to the executed procedure itself.
 SELECT*
 	FROM atd333; 
-RENAME TABLE atd333 TO executed_procedures;                                                -- If "procedures" and "atd333" are distinct tables, adjustments will be needed.
+RENAME TABLE atd333 TO executed_procedures;                                             
 ALTER TABLE executed_procedures DROP COLUMN RETORNO;
 ALTER TABLE executed_procedures DROP COLUMN NUMERO;
 ALTER TABLE executed_procedures DROP COLUMN LANCTO_ATD444;
@@ -562,7 +562,7 @@ RENAME TABLE formas_de_pagamento TO payment_methods;
 
 -- Table: man001 (Orthodontic Installations)
 -- New Table: orthodontic_installations
--- Comment: Removal of control columns, observations, status, and diagnostic/prognostic information not central to the analysis of installations.
+-- Removal of control columns, observations, status, and diagnostic/prognostic information not central to the analysis of installations.
 SELECT*
 FROM 
 	man001; 
@@ -582,7 +582,7 @@ ALTER TABLE orthodontic_installations DROP COLUMN AXON_ID;
 
 -- Table: man002 (Orthodontic Treatment Prices)
 -- New Table: orthodontic_treatment_prices
--- Comment: Removal of order, control, and due date limit columns.
+-- Removal of order, control, and due date limit columns.
 SELECT* 
 FROM 
 	man002;
