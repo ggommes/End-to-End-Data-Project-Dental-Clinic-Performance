@@ -33,7 +33,7 @@ The company's main database structure, as seen below, consists of several interc
 
 The clinic faces a concerning downward trend in general procedure revenue and patient volume since its 2022 peak, despite positive cumulative growth.This financial instability is compounded by significant month-over-month revenue volatility, suggesting challenges in cash flow predictability. Furthermore, an alarming number of delayed appointments highlights a critical operational inefficiency impacting patient satisfaction and potentially overall service capacity.
 
-![grafico1](https://github.com/user-attachments/assets/ccc2b42a-008d-45ad-aeec-1796eeed9c5d)
+![revenue_and_patients_trends](https://github.com/user-attachments/assets/bca432d0-4440-4816-ab69-044e8277066e)
 
 
 # Insights Deep Dive
@@ -44,7 +44,9 @@ The clinic faces a concerning downward trend in general procedure revenue and pa
 
 - **The subsequent decline post-2022, exacerbated by the temporary closure for renovations, suggests that the growth strategies that worked during the traction phase may no longer be effective in sustaining volume.** This indicates an exhaustion of demand or a failure to continuously renew the patient base for general procedures, requiring a re-evaluation of market and operational approaches.
 
- ![grafico2](https://github.com/user-attachments/assets/7d2a2ea9-817a-4d6a-b50f-3892f0a1ea2b)
+
+<img width="1448" height="799" alt="revenue_ _growth_over_time" src="https://github.com/user-attachments/assets/73a6b288-6e4a-49fe-95b2-8ac1393c59e3" />
+
 
 
 ### Consistent Growth of the Orthodontic Base Counteracting General Instability.
@@ -54,8 +56,7 @@ The clinic faces a concerning downward trend in general procedure revenue and pa
 
 - **Orthodontics acts as a pillar of financial stability and cash flow predictability**, validating its strategic importance to the business model due to its recurring nature.
 
- ![ortho revenue](https://github.com/user-attachments/assets/43919f26-c0c2-4aa3-9ac8-8cf5f94ea606)
-
+ <img width="1417" height="370" alt="orthodontic_treatments_revenue" src="https://github.com/user-attachments/assets/7879bf60-3011-42e2-af86-7bd32cb189ed" />
 
 ### Monthly Revenue Variation Reveals Seasonality and Predictability Challenges
 - **Month-over-month analysis reveals high volatility in total revenue**, with significant variations during the years. For example, total revenue in November 2022 was R$ 112.256,00 but dropped to R$ 65.438,00 in December — a decrease of 41.7%. 
