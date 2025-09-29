@@ -1,93 +1,88 @@
-# Project Background
+# Contexto
 
-I was a dentist and co-owner of a dental clinic in Lajeado, Brazil. Which has been providing comprehensive dental care for six years. The clinic’s business model is built on a broad range of services, with orthodontics (braces) as a key revenue driver due to its recurring monthly income from patient consultations. Implant rehabilitations represent the highest-value procedures, complemented by a wide range of general dentistry services. This project was made to analyze data and metrics from 2020 to 2025 and provide actionable insights and recommendations to the continuing partners.
+Fui coproprietário de uma clínica odontológica em Lajeado,Rio Grande do sul, que oferece atendimento odontológico abrangente há seis anos. O modelo de negócios da clínica é baseado em uma ampla gama de serviços, com a ortodontia (aparelhos) como um dos principais motores de receita, devido à renda mensal recorrente das consultas de pacientes. As reabilitações com implantes representam os procedimentos de maior valor, complementados por vários serviços de odontologia geral.
 
-Based on the extracted data and the clinic's operational context, this analysis will deliver insights and recommendations across four critical areas:
+Este projeto foi criado para analisar dados e métricas de 2020 a 2025 e fornecer insights e recomendações aos sócios remanescentes. Com base nos dados extraídos e no contexto operacional da clínica, esta análise fornecerá informações e recomendações em quatro áreas críticas:
 
-- **Revenue & Patient Trends Over Time:** - Evaluation of historical revenue and patient volume patterns, focusing on annual and monthly performance for general procedures and orthodontic patients.
-- **Month-over-Month Sales Performance Analysis:** - Assessment of the clinic's long-term financial growth by tracking the accumulated revenue for key service segments. 
-- **Cumulative Performance Insights & Growth:** - Detailed analysis of monthly sales fluctuations and consistency, including overall revenue changes and performance specifically for orthodontic services.
-- **Product & Specialty Revenue Contribution:** - Breakdown of the financial contribution of each dental specialty and individual treatment to the clinic's total revenue. 
+- **Tendências de Receita e Pacientes ao Longo do Tempo:** - Avaliação dos padrões históricos de receita e volume de pacientes, com foco no desempenho anual e mensal para procedimentos gerais e pacientes de ortodontia.
+- **Análise de Desempenho de Vendas Mês a Mês** - Avaliação do crescimento financeiro de longo prazo da clínica, rastreando a receita acumulada para os principais segmentos de serviço.
+- **Insights e Crescimento do Desempenho Cumulativo** - Análise detalhada das flutuações e consistência das vendas mensais, incluindo mudanças na receita geral e no desempenho especificamente para os serviços de ortodontia.
+- **Contribuição de Receita por Produto e Especialidade** - Determinação da contribuição financeira de cada especialidade odontológica para a receita total da clínica. 
 
-**The SQL queries addressing various business questions can be found within this repository.**
+**As consultas SQL que abordam várias questões de negócio podem ser encontradas neste repositório.**
 
-# Data Structure & Initial Checks
-The company's main database structure, as seen below, consists of several interconnected tables, with a total row count of 151,511 records.
+# Estrutura do Banco de Dados
+A estrutura principal do banco de dados da empresa, apresentada a seguir, é composta por diversas tabelas interconectadas, totalizando 151.511 registros.
 
-- **patients:** This table holds demographic and registration information for all registered patients.
-- **initial_consultations:** Logs the very first consultation or evaluation visit a patient makes to the clinic.
-- **patient_visits:** Contains details about patient visits during an active treatment plan, essentially serving as a schedule
-- **procedures_appointments:** Details individual procedures scheduled for patients within appointments.
-- **executed_procedures:** Records procedures that have actually been performed.
-- **orthodontic_installations:** Records the initiation of orthodontic treatments by tracking the installation of orthodontic appliances.
-- **orthodontic_appointments:** Records appointments specifically for orthodontic follow-ups and maintenance.
-- **orthodontic_payments:** Stores payment records for orthodontic services.
-- **payments:** Contains general payment records for all services.
-- **direct_payments**: This table records direct, one-time payments that are not associated with a specific installment plan.
+- **patients:**  Esta tabela contém informações demográficas e de cadastro de todos os pacientes registrados.
+- **initial_consultations:** Registra a primeira consulta ou visita de avaliação de um paciente à clínica.
+- **patient_visits:** Contém detalhes sobre as visitas de pacientes durante um plano de tratamento ativo, servindo essencialmente como uma agenda.
+- **procedures_appointments:** Detalha os procedimentos individuais agendados para pacientes em consultas.
+- **executed_procedures:** Registra os procedimentos que foram de fato realizados.
+- **orthodontic_installations:** Registra o início dos tratamentos ortodônticos, rastreando a instalação dos aparelhos.
+- **orthodontic_appointments:** Registra as consultas específicas para acompanhamentos e manutenção ortodôntica.
+- **orthodontic_payments:** Armazena os registros de pagamentos para serviços ortodônticos.
+- **payments:** Contém os registros de pagamentos gerais para todos os serviços.
+- **direct_payments**: Esta tabela registra pagamentos diretos e únicos que não estão associados a um plano de parcelamento específico.
   
 ![Untitled Diagram (3)](https://github.com/user-attachments/assets/75ec0e43-c64b-4b90-bcaf-c547b82fbeb5)
 
- **The SQL queries used to inspect and clean the raw data for this analysis can be found within this repository.**
+ **As Querys utilizadas para inspecionar e limpar os dados brutos para esta análise podem ser encontradas neste repositório.**
 
-# Executive Summary
+# Sumário Executivo
 
-The clinic faces a concerning downward trend in general procedure revenue and patient volume since its 2022 peak, despite positive cumulative growth.This financial instability is compounded by significant month-over-month revenue volatility, suggesting challenges in cash flow predictability. Furthermore, an alarming number of delayed appointments highlights a critical operational inefficiency impacting patient satisfaction and potentially overall service capacity.
+A clínica enfrenta uma preocupante tendência de queda na receita e no volume de pacientes de procedimentos gerais desde seu pico em 2022, apesar do crescimento cumulativo positivo. Essa instabilidade financeira é agravada por uma significativa volatilidade de receita mês a mês, sugerindo desafios na previsibilidade do fluxo de caixa. Além disso, um número alarmante de atrasos em consultas destaca uma ineficiência operacional crítica que afeta a satisfação do paciente e, potencialmente, a capacidade geral de serviço.
 
 ![revenue_and_patients_trends](https://github.com/user-attachments/assets/bca432d0-4440-4816-ab69-044e8277066e)
 
 
-# Insights Deep Dive
-### Growth Trajectory: From Resilient Launch to Post-2022 Challenges.
-- **With operations beginning in February 2020, the clinic started with promising revenue, demonstrating its potential.** However, the "Revenue by Month" graph clearly illustrates an immediate drop in revenue in the months following February 2020 ( March to May), a direct reflection of the initial impact of the COVID-19 pandemic and lockdown measures.Despite this challenging start, the clinic showed remarkable resilience, achieving strong traction and continuous growth in both revenue and patient volume from mid-2020 onwards, which culminated in a notable peak performance in 2022. In that year, general procedure revenue reached R$ 141.021,00 in January.
+# Análise Detalhada dos Insights
+### Trajetória de Crescimento: De um Lançamento Resiliente a Desafios Pós-2022.
+- **Com as operações iniciadas em fevereiro de 2020, a clínica começou com uma receita promissora, demonstrando seu potencial.** No entanto, o gráfico "Receita por Mês" ilustra claramente uma queda imediata na receita nos meses seguintes a fevereiro de 2020 (março a maio), um reflexo direto do impacto inicial da pandemia de COVID-19 e das medidas de lockdown. Apesar desse início desafiador, a clínica demonstrou uma resiliência notável, alcançando forte tração e crescimento contínuo tanto em receita quanto em volume de pacientes a partir de meados de 2020, culminando em um pico de desempenho notável em 2022. Nesse ano, a receita de procedimentos gerais alcançou R$ 141.021,00 em janeiro.
 
-- **Contrasting with this initial success, starting in early 2023, the data reveals a clear deceleration and subsequent continuous downward trend in general procedure revenue and patient volume.** While the drastic reduction in 2024, with general procedure revenue falling to R$ 1.046,00 – representing a 99,26% reduction from the 2022 peak – was significantly impacted by the closure of the clinic in April and May for structural renovations, it's important to note that a strong decline trend in revenue was already being observed in the months prior to this temporary closure.
+- **Em contraste com esse sucesso inicial, a partir do início de 2023, os dados revelam uma clara desaceleração e subsequente tendência contínua de queda na receita e no volume de pacientes de procedimentos gerais.** Embora a drástica redução em 2024, com a receita de procedimentos gerais caindo para R$ 1.046,00 — representando uma redução de 99,26% em relação ao pico de 2022 — tenha sido significativamente impactada pelo fechamento da clínica em abril e maio para reformas estruturais, é importante notar que uma forte tendência de queda na receita já vinha sendo observada nos meses anteriores a este fechamento temporário.
 
-- **The subsequent decline post-2022, exacerbated by the temporary closure for renovations, suggests that the growth strategies that worked during the traction phase may no longer be effective in sustaining volume.** This indicates an exhaustion of demand or a failure to continuously renew the patient base for general procedures, requiring a re-evaluation of market and operational approaches.
+- **A subsequente queda pós-2022, exacerbada pelo fechamento temporário para reformas, sugere que as estratégias de crescimento que funcionaram durante a fase de tração podem não ser mais eficazes para sustentar o volume.** Isso indica um esgotamento da demanda ou uma falha em renovar continuamente a base de pacientes para procedimentos gerais, exigindo uma reavaliação das abordagens de mercado e operacionais.
 
 
 <img width="1448" height="799" alt="revenue_ _growth_over_time" src="https://github.com/user-attachments/assets/73a6b288-6e4a-49fe-95b2-8ac1393c59e3" />
 
 
-
-### Consistent Growth of the Orthodontic Base Counteracting General Instability.
-- **In contrast to general procedures overall performance,** the number of new orthodontic treatments has shown a more stable and positive growth trajectory, consistently contributing to the clinic's recurring revenue. The number of new installations grew from 483 in 2020 to 1148 in 2022, reaching 1578 in 2024. Orthodontic patients visit the clinic monthly for follow-up appointments, generating a consistent and predictable stream of recurring monthly payments .The revenue generated specifically from orthodontic treatments follow-ups has remained resilient, representing a growing share of the total monthly revenue.
-
-- **This segment appears less susceptible to the fluctuations affecting general procedures**,due to the long-term commitment and installment payment structure inherent to orthodontic treatment.
-
-- **Orthodontics acts as a pillar of financial stability and cash flow predictability**, validating its strategic importance to the business model due to its recurring nature.
+### Crescimento Consistente da Base de Ortodontia Contrarrestando a Instabilidade Geral.
+- **Em contraste com o desempenho geral dos procedimentos,** o número de novos tratamentos ortodônticos tem mostrado uma trajetória de crescimento mais estável e positiva, contribuindo consistentemente para a receita recorrente da clínica. O número de novas instalações cresceu de 483 em 2020 para 1148 em 2022, chegando a 1578 em 2024. Pacientes de ortodontia visitam a clínica mensalmente para consultas de acompanhamento, gerando um fluxo consistente e previsível de pagamentos mensais recorrentes. A receita gerada especificamente a partir dos acompanhamentos de tratamentos ortodônticos tem se mantido resiliente, representando uma parcela crescente da receita mensal total.
+- **Este segmento parece menos suscetível às flutuações que afetam os procedimentos gerais**,devido ao compromisso de longo prazo e à estrutura de pagamento em parcelas inerente ao tratamento ortodôntico.
+- **A ortodontia atua como um pilar de estabilidade financeira e previsibilidade do fluxo de caixa,**, validando sua importância estratégica para o modelo de negócios devido à sua natureza recorrente.
 
  <img width="1417" height="370" alt="orthodontic_treatments_revenue" src="https://github.com/user-attachments/assets/7879bf60-3011-42e2-af86-7bd32cb189ed" />
 
-### Monthly Revenue Variation Reveals Seasonality and Predictability Challenges
-- **Month-over-month analysis reveals high volatility in total revenue**, with significant variations during the years. For example, total revenue in November 2022 was R$ 112.256,00 but dropped to R$ 65.438,00 in December — a decrease of 41.7%. 
-
-- **Seasonal patterns are evident,** with months like August and November consistently showing higher revenues, while February and April stand out as the lowest-performing months
-
-- **These fluctuations make cash flow less predictable**, which can challenge financial planning and limit our ability to invest confidently
+### Variação de Receita Mensal Revela Sazonalidade e Desafios de Previsibilidade
+- **A análise mês a mês revela alta volatilidade na receita total**, com variações significativas ao longo dos anos. Por exemplo, a receita total em novembro de 2022 foi de R$ 112.256,00, mas caiu para R$ 65.438,00 em dezembro — uma diminuição de 41,7%.
+- **Padrões sazonais são evidentes,** com meses como agosto e novembro consistentemente mostrando receitas mais altas, enquanto fevereiro e abril se destacam como os meses de menor desempenho.
+- **Essas flutuações tornam o fluxo de caixa menos previsível,**, o que pode desafiar o planejamento financeiro e limitar a capacidade de investir com confiança.
 
 ![revenue seasonality](https://github.com/user-attachments/assets/68222f58-2862-4b75-9ad0-8a794f15619e)
 
-### General Procedures: Declining New Patient Volume
-- **The volume of new initial consultations or evaluations for general procedures (excluding orthodontic installations) has consistently decreased**. In May 2021, 156 new general consultations were registered, dropping to 16 in June 2025, a 89.7%. reduction.
+### Procedimentos Gerais: Volume de Novos Pacientes em Queda
+- **O volume de novas consultas ou avaliações iniciais para procedimentos gerais (excluindo instalações ortodônticas) tem diminuído consistentemente**. Em maio de 2021, 156 novas consultas gerais foram registradas, caindo para 16 em junho de 2025, uma redução de 89,7%.
 
-- **This decline is a strong indicator** that current patient acquisition strategies for non-orthodontic procedures are losing effectiveness or that there is a bottleneck in conversion.
+- **Essa queda é um forte indicativo** de que as estratégias atuais de aquisição de pacientes para procedimentos não ortodônticos estão perdendo eficácia ou que há um gargalo na conversão.
 
-- **Additionally, an alarming number of delayed appointments, as highlighted in the Executive Summary, is a critical operational inefficiency impacting patient satisfaction** This issue may be contributing to the decline in new patient volume, as community perceptions spread.
+- **Além disso, um número alarmante de atrasos em consultas, conforme destacado no Sumário Executivo, é uma ineficiência operacional crítica que afeta a satisfação do paciente** Este problema pode estar contribuindo para a queda no volume de novos pacientes, à medida que a percepção da comunidade se espalha.
 
 ![22222](https://github.com/user-attachments/assets/7cb48815-b24f-4c1b-9d31-f70a3fad9919)
 
-# Recommendations
-Based on the insights and findings above, it's recommended to the continuos partners to consider the following:
+# Recomendações
+Com base nos insights e descobertas acima, recomenda-se aos sócios remanescentes considerar o seguinte:
 
-* With significant deceleration and continuous downward trend in general procedure revenue and patient volume since early 2023. It's crucial to develop and implement targeted marketing campaigns to re-engage past patients and attract new ones specifically for general dentistry, with a strong emphasis on high-value procedures like dental implants.
-* Given the inherent recurrency of orthodontic treatments, it is strategically imperative not only to maintain but expand this patient base to ensure a predictable and stable cash flow for the business. This involves increasing investment in digital marketing and lead generation efforts, as well as exploring strategic partnerships (with schools for exemple) specifically for orthodontic treatments, emphasizing their long-term benefits and predictable payment structures.
-* In order to mitigate the high monthly revenue volatility, characterized by significant peaks and troughs throughout the year, it is recommend implementing strategic promotional campaigns during historically low-revenue months and optimizing scheduling to maximize clinic capacity utilization during peak periods. Additionally, consider loyalty programs to encourage consistent patient flow. Furthermore, it is crucial to establish a clear and standardized pricing strategy, specifically targeting a reduction in month-over-month revenue variance.
-* A large number of delayed appointments represents a critical operational inefficiency. Given that a significant contributing factor is the high volume of patients seen daily by dentists within limited consultation time, it is essential to re-evaluate appointment durations and dentist schedules to ensure realistic allocation for each procedure. While patient tardiness contributes, optimizing internal scheduling is paramount to improve patient flow and overall efficiency.
+* Com a significativa desaceleração e a tendência contínua de queda na receita e no volume de pacientes de procedimentos gerais desde o início de 2023, é crucial desenvolver e implementar campanhas de marketing direcionadas para reengajar pacientes antigos e atrair novos, especificamente para a odontologia geral, com forte ênfase em procedimentos de alto valor como implantes dentários.
+* Dada a recorrencia inerente aos tratamentos ortodônticos, é estrategicamente imperativo não apenas manter, mas expandir essa base de pacientes para garantir um fluxo de caixa previsível e estável. Isso envolve aumentar o investimento em marketing digital e esforços de geração de leads, além de explorar parcerias estratégicas (com escolas, por exemplo) especificamente para tratamentos ortodônticos, enfatizando seus benefícios de longo prazo e estruturas de pagamento previsíveis.
+* A fim de mitigar a alta volatilidade da receita mensal, caracterizada por picos e quedas significativas ao longo do ano, é recomendado implementar campanhas promocionais estratégicas durante os meses historicamente de menor receita e otimizar a agenda para maximizar a utilização da capacidade da clínica durante os períodos de pico. Adicionalmente, considere programas de fidelidade para incentivar um fluxo consistente de pacientes. Além disso, é crucial estabelecer uma estratégia de precificação clara e padronizada, visando especificamente a redução da variação de receita mês a mês.
+* Um grande número de atrasos em consultas representa uma ineficiência operacional crítica. Dado que um fator contribuinte significativo é o alto volume de pacientes atendidos diariamente por dentistas em um tempo de consulta limitado, é essencial reavaliar as durações das consultas e as agendas dos dentistas para garantir uma alocação de tempo realista para cada procedimento. Embora o atraso dos pacientes contribua, a otimização da agenda interna é fundamental para melhorar o fluxo de pacientes e a eficiência geral.
+  
+# Limitações
+Estes são fatores que não foram (ou não puderam ser) totalmente considerados, ou limitações inerentes aos dados/análises que podem influenciar as conclusões:
 
-# Limitations
-These are factors that were not (or could not be) fully accounted for, or limitations inherent to the data/analysis that might influence conclusions:
-
-* The analysis is purely internal to the clinic. It does not incorporate external market dynamics such as local competition ( new clinics opened, competitor pricing strategies in Lajeado), broader economic shifts affecting consumer spending on dental services, or specific industry trends beyond what is reflected in the clinic's own data. These factors could significantly influence the observed revenue and patient trends.
-* While quantitative trends (consultation declines, conversion rates, delayed appointments) were identified, the analysis does not incorporate qualitative data from patient surveys, feedback, or detailed staff interviews. This limits a deeper understanding of the "why" behind patient drop-offs, low conversion rates, or specific reasons for delays (patient satisfaction with initial consultation, specific pain points in the scheduling process).
+* A análise é puramente interna à clínica. Ela não incorpora dinâmicas de mercado externas, como a concorrência local (novas clínicas abertas, estratégias de preços de concorrentes em Lajeado), mudanças econômicas mais amplas que afetam os gastos do consumidor com serviços odontológicos ou tendências específicas da indústria além do que é refletido nos próprios dados da clínica. Esses fatores poderiam influenciar significativamente as tendências de receita e pacientes observadas.
+* Embora tendências quantitativas (queda de consultas, taxas de conversão, atrasos em consultas) tenham sido identificadas, a análise não incorpora dados qualitativos de pesquisas com pacientes, feedback ou entrevistas detalhadas com a equipe. Isso limita uma compreensão mais profunda do "porquê" por trás da evasão de pacientes, baixas taxas de conversão ou razões específicas para atrasos (satisfação do paciente com a consulta inicial, pontos problemáticos no processo de agendamento).
 
 
